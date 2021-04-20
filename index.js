@@ -7,14 +7,15 @@ const MongoClient = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectId;
 const { response } = require('express')
 const port = process.env.PORT || 5000
-
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.3ij59.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 app.use(cors())
 app.use(bodyParser.json())
 
-const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.3ij59.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
+
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
     console.log('connection err', err)
+
   const productsCollection = client.db("samishop").collection("products");
   console.log('database connected successfully')
 

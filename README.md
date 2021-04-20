@@ -4,6 +4,9 @@ A Full stack shop app where user can buy and login for free.
 ## live link:
 https://sami-shop-fullstack.web.app
 
+## server code: https://github.com/ummesadeka/sami-shop-server
+## client code: https://github.com/ummesadeka/Sami-shop
+
 ## Features
 * MERN-stack web app, you have hassle free google sign in method.
 * You can show your login task based on your email.
